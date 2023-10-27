@@ -32,7 +32,7 @@ For running locally without docker:
 ## Troubleshooting
 
 1. If you get that ports are not avaliable (if you don't want to use another port): 
-    1. `lsof -i :5000`
+    1. `lsof -i :<PORTINUSE>`
     2. `kill -9 <PID>`
 
 `
