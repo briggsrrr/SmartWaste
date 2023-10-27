@@ -14,9 +14,9 @@ Vision [here](https://docs.google.com/document/d/19BQFE9qavzx0fWWvS-5EhH40ZsDCvB
 > iot-device
 > > sensors
 > > > ultrasonic.py
-> > dockerfile
-> > http_client.py
-> > requirements.txt
+> > dockerfile \
+> > http_client.py \
+> > requirements.txt 
 
 ## Backend
 `cd backend`
