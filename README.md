@@ -6,28 +6,15 @@ Vision [here](https://docs.google.com/document/d/19BQFE9qavzx0fWWvS-5EhH40ZsDCvB
 
 ## Filesystem
 
-> backend 
-> > main.py
+### TODO: Create filesystem
 
-> frontend
+## Frontend-Backend
+`cd frontend-backend`
 
-> iot-device
-> > sensors
-> > > ultrasonic.py
-
-> > dockerfile \
-> > http_client.py \
-> > requirements.txt 
-
-## Backend
-`cd backend`
-
-## Frontend
-`cd frontend`
 
 For running locally without docker: 
 - `uvicorn app.main:app --reload`
-
+git
 
 ## Troubleshooting
 
