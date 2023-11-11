@@ -6,18 +6,7 @@ Vision [here](https://docs.google.com/document/d/19BQFE9qavzx0fWWvS-5EhH40ZsDCvB
 
 ## Filesystem
 
-> backend 
-> > main.py
-
-> frontend
-
-> iot-device
-> > sensors
-> > > ultrasonic.py
-
-> > dockerfile \
-> > http_client.py \
-> > requirements.txt 
+### TODO: Create filesystem
 
 ## Backend
 `cd backend`
