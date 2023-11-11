@@ -8,15 +8,13 @@ Vision [here](https://docs.google.com/document/d/19BQFE9qavzx0fWWvS-5EhH40ZsDCvB
 
 ### TODO: Create filesystem
 
-## FrontBackend
-`cd backend`
+## Frontend-Backend
+`cd frontend-backend`
 
-## Frontend
-`cd frontend`
 
 For running locally without docker: 
 - `uvicorn app.main:app --reload`
-
+git
 
 ## Troubleshooting
 
