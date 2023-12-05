@@ -7,7 +7,7 @@ import time
 GPIO.setmode(GPIO.BCM)
 
 # set GPIO pins
-GPIO_TRIGGER = 16
+GPIO_TRIGGER = 18
 GPIO_ECHO = 24
 
 # set GPIO direction
@@ -38,7 +38,10 @@ def distance():
     TimeElapsed = StopTime - StartTime
 
     # multiply with the ultrasonic speed (34300 cm/s) and divide by 2
-    distance = (TimeElapsed * 34300) / 2
+    distance = TimeElapsed * 17150
+    distance = round(distance, 2)
+
+    #distance = (TimeElapsed * 34300) / 2
  
     return distance
  
