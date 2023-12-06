@@ -26,7 +26,8 @@ Video
 ```
 
 ## Running IOT 
-`cd iot-device/sensors`
+`cd iot-device/sensors`  
+
 `python ultrasonic.py`
 
 ## Frontend-Backend
