@@ -1,6 +1,9 @@
 # Smart-Waste
 
-TODO: Insert Description
+Our vision is to create a connected and sustainable campus through an innovative smart waste management system. By outfitting trash and recycling bins with laser sensors and connectivity, we will build a network that provides real-time bin fill status and optimization of waste routes.
+
+Our technology will increase collection efficiency, reducing emissions from hauling routes. The data gathered will provide insights to drive further waste minimization initiatives and zero waste goals.
+
 
 # Links
 
@@ -12,13 +15,21 @@ TODO: Insert Description
 |Demo/Slides         | [link](https://drive.google.//)   |
 |Additional          | [link](https://drive.google.//)   |
 Video 
-## Filesystem
 
-### TODO: Create filesystem
+## Requirements
+- Windows 10+ with PowerShell and Git
+- macOS 12+ with Command Line tools
+
+## Cloning Steps
+```console
+~$ git clone git@github.com:ucsb/CS190B-F23-SmartWaste-rbriggs.git
+```
+
+## Running IOT 
+'python ultrasonic.py'
 
 ## Frontend-Backend
 `cd frontend-backend`
-
 
 For running locally without docker: 
 - `uvicorn app.main:app --reload`
