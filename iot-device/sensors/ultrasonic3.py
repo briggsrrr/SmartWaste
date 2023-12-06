@@ -13,11 +13,11 @@ GPIO.setup(GPIO_ECHO, GPIO.IN)
 
 GPIO.output(GPIO_TRIG, GPIO.LOW) 
 
-Time.sleep(2) 
+time.sleep(2) 
 
 GPIO.output(GPIO_TRIG, GPIO.HIGH) 
 
-Time.sleep(0.00001) 
+time.sleep(0.00001) 
 
 GPIO.output(GPIO_TRIG, GPIO.LOW) 
 
