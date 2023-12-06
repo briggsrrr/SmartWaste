@@ -1,34 +1,28 @@
-import RPi.GPIO as GPIO
+from gpiozero import DistanceSensor
 import time
 
+# GPIO pins
+GPIO_TRIGGER = 16
+GPIO_ECHO = 18
 
-GPIO.setmode(GPIO.BCM)
+sensor = DistanceSensor(echo=GPIO_ECHO, trigger=GPIO_TRIGGER)
 
-TRIG = 23
-ECHO = 24
+def distance():
+    # Wait for the sensor to settle
+    time.sleep(0.1)
+    
+    # Measure distance in centimeters
+    dist = sensor.distance * 100
+    return round(dist, 2)
 
-print("Distance Measurement In Progress")
+if __name__ == '__main__':
+    try:
+        while True:
+            dist = distance()
+            print("Measured Distance = %.1f cm" % dist)
+            time.sleep(1)
 
-GPIO.setup(TRIG,GPIO.OUT)
-GPIO.setup(ECHO,GPIO.IN)
-
-GPIO.output(TRIG, False)
-print("Waiting For Sensor To Settle")
-time.sleep(2)
-
-GPIO.output(TRIG, True)
-time.sleep(0.00001)
-GPIO.output(TRIG, False)
-
-while GPIO.input(ECHO)==0:
-    pulse_start = time.time()
-
-while GPIO.input(ECHO)==1:
-    pulse_end = time.time() 
-
-pulse_duration = pulse_end - pulse_start
-distance = pulse_duration * 17150
-
-print("Distance:",distance,"cm") 
-
-GPIO.cleanup()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        sensor.close()
