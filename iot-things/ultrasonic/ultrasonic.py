@@ -1,6 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
-# SPDX-License-Identifier: Apache-2.0.
-
 from awscrt import mqtt, http
 from awsiot import mqtt_connection_builder
 import sys
@@ -8,20 +5,50 @@ import threading
 import time
 import json
 from utils.command_line_utils import CommandLineUtils
+import RPi.GPIO as GPIO
 
-# This sample uses the Message Broker for AWS IoT to send and receive messages
-# through an MQTT connection. On startup, the device connects to the server,
-# subscribes to a topic, and begins publishing messages to that topic.
-# The device should receive those same messages back from the message broker,
-# since it is subscribed to that same topic.
+GPIO.setmode(GPIO.BCM)
+GPIO_TRIGGER = 23
+GPIO_ECHO = 24
+GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
+GPIO.setup(GPIO_ECHO, GPIO.IN)
 
-# cmdData is the arguments/input from the command line placed into a single struct for
-# use in this sample. This handles all of the command line parsing, validating, etc.
-# See the Utils/CommandLineUtils for more information.
+
 cmdData = CommandLineUtils.parse_sample_input_pubsub()
 
 received_count = 0
 received_all_event = threading.Event()
+
+
+def distance():
+    # set Trigger to HIGH
+    GPIO.output(GPIO_TRIGGER, True)
+ 
+    # set Trigger after 0.01ms to LOW
+    time.sleep(0.00001)
+    GPIO.output(GPIO_TRIGGER, False)
+ 
+    StartTime = time.time()
+    StopTime = time.time()
+ 
+    # record StartTime
+    while GPIO.input(GPIO_ECHO) == 0:
+        StartTime = time.time()
+ 
+    # record time of arrival
+    while GPIO.input(GPIO_ECHO) == 1:
+        StopTime = time.time()
+ 
+    
+    TimeElapsed = StopTime - StartTime
+
+    # multiply with the ultrasonic speed (34300 cm/s) and divide by 2
+    distance = TimeElapsed * 17150
+    distance = round(distance, 2)
+
+    #distance = (TimeElapsed * 34300) / 2
+ 
+    return distance
 
 # Callback when connection is accidentally lost.
 def on_connection_interrupted(connection, error, **kwargs):
@@ -132,9 +159,18 @@ if __name__ == '__main__':
 
         publish_count = 1
         while (publish_count <= message_count) or (message_count == 0):
-            message = "{} [{}]".format(message_string, publish_count)
+
+            # message = "{} [{}]".format(message_string, publish_count)
+            # print("Publishing message to topic '{}': {}".format(message_topic, message))
+            # message_json = json.dumps(message)
+
+            #TODO fiz this message
+            dist = distance()
+            message = "{} [{}]".format(dist, publish_count)
             print("Publishing message to topic '{}': {}".format(message_topic, message))
             message_json = json.dumps(message)
+
+
             mqtt_connection.publish(
                 topic=message_topic,
                 payload=message_json,

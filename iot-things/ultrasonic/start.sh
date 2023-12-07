@@ -32,5 +32,5 @@ if ! python3 -c "import awsiot" &> /dev/null; then
 fi
 
 # run pub/sub sample app using certificates downloaded in package
-printf "\nRunning pub/sub sample application...\n"
-python3 aws-iot-device-sdk-python-v2/samples/pubsub.py --endpoint a32sdds57c4zsq-ats.iot.us-west-2.amazonaws.com --ca_file root-CA.crt --cert trashThing.cert.pem --key trashThing.private.key --client_id basicPubSub --topic sdk/test/python --count 0
+printf "\nRunning SmartWaste sample application...\n"
+python3 ultrasonic-AWS.py --endpoint a32sdds57c4zsq-ats.iot.us-west-2.amazonaws.com --ca_file root-CA.crt --cert trashThing.cert.pem --key trashThing.private.key --client_id basicPubSub --topic sdk/test/python --count 0
