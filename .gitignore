@@ -1,3 +1,12 @@
 certs/*
 
 .env
+
+iot-device/sensors/aws-iot-device-sdk-python-v2/*
+
+*.crt 
+*.pem
+trashThing-Policy 
+*.key
+
+aws-iot-device-sdk-python-v2
