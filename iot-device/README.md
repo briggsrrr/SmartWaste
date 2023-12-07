@@ -1,7 +1,5 @@
 # BOOTING 
-ssh pi@briggsrrr.local
-
-U: briggsrrr
+ssh briggsrrr@briggsrrr.local
 
 # SHUTODWN 
 sudo shutdown -h now
