@@ -6,6 +6,7 @@ import time
 import json
 from utils.command_line_utils import CommandLineUtils
 import RPi.GPIO as GPIO
+import psutil
 
 GPIO.setmode(GPIO.BCM)
 GPIO_TRIGGER = 23
@@ -100,7 +101,6 @@ def on_connection_closed(connection, callback_data):
     print("Connection closed")
 
 if __name__ == '__main__':
-    # Create the proxy options if the data is present in cmdData
     proxy_options = None
     if cmdData.input_proxy_host is not None and cmdData.input_proxy_port != 0:
         proxy_options = http.HttpProxyOptions(
@@ -109,7 +109,7 @@ if __name__ == '__main__':
 
     # Create a MQTT connection from the command line data
     mqtt_connection = mqtt_connection_builder.mtls_from_path(
-        endpoint=cmdData.input_endpoint,
+        endpoint='a32sdds57c4zsq-ats.iot.us-west-2.amazonaws.com',
         port=cmdData.input_port,
         cert_filepath=cmdData.input_cert,
         pri_key_filepath=cmdData.input_key,
@@ -123,11 +123,7 @@ if __name__ == '__main__':
         on_connection_success=on_connection_success,
         on_connection_failure=on_connection_failure,
         on_connection_closed=on_connection_closed)
-
-    if not cmdData.input_is_ci:
-        print(f"Connecting to {cmdData.input_endpoint} with client ID '{cmdData.input_clientId}'...")
-    else:
-        print("Connecting to endpoint with client ID")
+    
     connect_future = mqtt_connection.connect()
 
     # Future.result() waits until a result is available
@@ -135,7 +131,7 @@ if __name__ == '__main__':
     print("Connected!")
 
     message_count = cmdData.input_count
-    message_topic = cmdData.input_topic
+    message_topic = "smartwaste/distance"
     message_string = cmdData.input_message
 
     # Subscribe
@@ -159,17 +155,15 @@ if __name__ == '__main__':
 
         publish_count = 1
         while (publish_count <= message_count) or (message_count == 0):
-
-            # message = "{} [{}]".format(message_string, publish_count)
-            # print("Publishing message to topic '{}': {}".format(message_topic, message))
-            # message_json = json.dumps(message)
-
-            #TODO fiz this message
-            dist = distance()
-            message = "{} [{}]".format(dist, publish_count)
-            print("Publishing message to topic '{}': {}".format(message_topic, message))
-            message_json = json.dumps(message)
-
+            dist = int(distance())
+            current_time_epoch = time.time()
+            message_data = {
+                "id": publish_count,
+                "distance": dist,
+                "timestamp": current_time_epoch,
+            }
+            message_json = json.dumps(message_data)
+            print(message_json)
 
             mqtt_connection.publish(
                 topic=message_topic,

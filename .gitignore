@@ -1,5 +1,3 @@
-certs/*
-
 .env
 
 iot-device/sensors/aws-iot-device-sdk-python-v2/*
