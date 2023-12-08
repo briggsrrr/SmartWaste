@@ -50,9 +50,18 @@ function App() {
           <button className='button' onClick={buttonClick}>Send SMS</button>
           )}
         </div>
-      <div className='details'>        
-        <h1 className='app-welcome-details'> Does the trash need to be taken out?</h1>
-        <h1 className='app-welcome-details-trash'>(if your trashcan needs to be taken out, the trash can will be red. Otherwise, it is not full yet!)</h1>
+      <div className='details'>
+      {!trash && buttonCounter === 0 && (
+          <h1 className='app-welcome-details'> The trash needs to be taken out!</h1>
+
+        )}
+        {trash && buttonCounter === 1 && (
+          <h1 className='app-welcome-details'> Waiting for someone to take out the trash!</h1>
+
+        )}
+        {trash && buttonCounter === 2 && (
+          <h1 className='app-welcome-details-trash'>The Trash is not full yet!</h1>
+        )}      
       </div>
         
     </div>
