@@ -27,7 +27,7 @@ function App() {
       }
       else{
         setLastFetchedItem({ id: mostRecentItem.id, timestamp: mostRecentItem.timestamp });
-        setIsTrashFull(false);
+        setIsTrashFull(true);
       }
     })
     .catch(error => {
