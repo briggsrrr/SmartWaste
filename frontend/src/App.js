@@ -1,16 +1,19 @@
 import './App.css';
 import Logo from "./images/logo.png";
 import redTrash from "./images/redtrash.png";
+import yellowTrash from "./images/yellowtrash.png";
 import greenTrash from "./images/greentrash.png";
 import { useState } from 'react';
 
 function App() {
   const [trash, setTrash] = useState(false);
-  const trashStatus = () => {
+  const [buttonCounter, setButtonCounter] = useState(0);
+  // const trashStatus = () => {
     
-  }
+  // }
   const buttonClick = () => {
     setTrash(!trash);
+    setButtonCounter(buttonCounter + 1);
     fetch('http://127.0.0.1:5000/send_sms', {
       method: 'POST',
       headers: {
@@ -32,10 +35,18 @@ function App() {
       <img src={Logo} alt="Logo" />
       <div className='text'>
         <h1 className='app-welcome'>Welcome to Smart waste!</h1>
-        <img className="trash" src={trash ? greenTrash : redTrash} alt="Trash" />
+        {!trash && buttonCounter === 0 && (
+          <img className="trash" src={redTrash} alt="Red Trash" />
+        )}
+        {trash && buttonCounter === 1 && (
+          <img className="trash" src={yellowTrash} alt="Yellow Trash" />
+        )}
+        {trash && buttonCounter === 2 && (
+          <img className="trash" src={greenTrash} alt="Green Trash" />
+        )}
       </div>
       <div className="button-container">
-        {!trash && (
+        {!trash && buttonCounter===0 &&(
           <button className='button' onClick={buttonClick}>Send SMS</button>
           )}
         </div>
