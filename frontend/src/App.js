@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 function App() {
   const [isTrashFull, setIsTrashFull] = useState(false);
   const [buttonCounter, setButtonCounter] = useState(0);
-  const [lastFetchedItem, setLastFetchedItem] = useState({ id: null, timestamp: null });
+
   const trashStatus = async () => {
     fetch('/items')
     .then(response => {
@@ -18,16 +18,17 @@ function App() {
       return response.json();
     })
     .then(data => {
-      const mostRecentItem = data[data.length - 1]; // Assuming the last item is the most recent
-      console.log(mostRecentItem);
-
-      if(mostRecentItem.id === lastFetchedItem.id && mostRecentItem.timestamp === lastFetchedItem.timestamp){
-        setIsTrashFull(false); // New data available, trash is full
-        setButtonCounter(0);
+      console.log(data);
+      const mostRecentItem = data[data.length - 1];
+      if (mostRecentItem.distance<10) {
+        setIsTrashFull(true);
+        console.log(mostRecentItem.distance);
+        console.log(isTrashFull);
       }
       else{
-        setLastFetchedItem({ id: mostRecentItem.id, timestamp: mostRecentItem.timestamp });
-        setIsTrashFull(true);
+        console.log(mostRecentItem.distance);
+        console.log(isTrashFull);
+        setIsTrashFull(false)
       }
     })
     .catch(error => {
@@ -39,7 +40,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       trashStatus();
-    }, 5000);
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -66,13 +67,13 @@ function App() {
       <img src={Logo} alt="Logo" />
       <div className='text'>
         <h1 className='app-welcome'>Welcome to Smart waste!</h1>
-        {isTrashFull && buttonCounter === 0 && (
+        {isTrashFull &&(
           <img className="trash" src={redTrash} alt="Red Trash" />
         )}
-        {isTrashFull && buttonCounter === 1 && (
+        {/* {isTrashFull &&(
           <img className="trash" src={yellowTrash} alt="Yellow Trash" />
-        )}
-        {!isTrashFull && buttonCounter === 0 && (
+        )} */}
+        {!isTrashFull && (
           <img className="trash" src={greenTrash} alt="Green Trash" />
         )}
       </div>
@@ -90,7 +91,7 @@ function App() {
           <h1 className='app-welcome-details'> Waiting for someone to take out the trash!</h1>
 
         )}
-        {!isTrashFull && buttonCounter === 0 && (
+        {!isTrashFull &&(
           <h1 className='app-welcome-details-trash'>The Trash is not full yet!</h1>
         )}      
       </div>
