@@ -17,26 +17,6 @@ Our technology will increase collection efficiency, reducing emissions from haul
 |Additional          | [link](https://drive.google.//)   |
 Video 
 
-## Requirements
-- Windows 10+ with PowerShell and Git
-- macOS 12+ with Command Line tools
-
-## Cloning Steps
-```console
-~$ git clone git@github.com:ucsb/CS190B-F23-SmartWaste-rbriggs.git
-```
-
-## Running IOT 
-`cd iot-device/sensors`  
-
-`python ultrasonic.py`
-
-## Frontend-Backend
-`cd frontend-backend`
-
-For running locally without docker: 
-- `uvicorn app.main:app --reload`
-git
 
 ## Troubleshooting
 
