@@ -40,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://xr7p7nx44e.execute-api.us-west-2.amazonaws.com"
+  "proxy": "https://xr7p7nx44e.execute-api.us-west-2.amazonaws.com",
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  }
 }

@@ -29,7 +29,7 @@ function App() {
           console.log('trash can data', data);
           return data;
         } catch (err) {
-          throw new Error(err.message); // Throwing an error to be caught by react-query
+          throw new Error(err.message); 
         }
       },
       refetchInterval: 1000,
