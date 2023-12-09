@@ -4,6 +4,7 @@ Our vision is to create a connected and sustainable campus through an innovative
 
 Our technology will increase collection efficiency, reducing emissions from hauling routes. The data gathered will provide insights to drive further waste minimization initiatives and zero waste goals.
 
+<img width="905" alt="Screenshot 2023-12-08 at 2 50 27 PM" src="https://github.com/ucsb/CS190B-F23-SmartWaste-rbriggs/assets/77701125/5bf646c0-1015-4fb8-b047-55904b6e2764">
 
 # Links
 

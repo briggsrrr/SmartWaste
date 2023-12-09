@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-smartwaste-dev-125223-authRole",
+      "UnauthRoleArn": "arn:aws:iam::609155361209:role/amplify-smartwaste-dev-125223-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::609155361209:role/amplify-smartwaste-dev-125223-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-smartwaste-dev-125223-deployment",
+      "UnauthRoleName": "amplify-smartwaste-dev-125223-unauthRole",
+      "StackName": "amplify-smartwaste-dev-125223",
+      "StackId": "arn:aws:cloudformation:us-west-2:609155361209:stack/amplify-smartwaste-dev-125223/b0eca710-960b-11ee-9c1b-06f3e8fda49f",
+      "AmplifyAppId": "d2xg64b51hv1ey"
+    },
+    "categories": {
+      "auth": {
+        "smartwaste5d65fb37": {}
+      }
+    }
+  }
+}
