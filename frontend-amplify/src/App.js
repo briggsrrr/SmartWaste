@@ -10,6 +10,7 @@ import axios from 'axios';
 import redTrash from "./images/redtrash.png";
 import yellowTrash from "./images/yellowtrash.png";
 import greenTrash from "./images/greentrash.png";
+import Header from './components/header'; 
 
 Amplify.configure(awsconfig);
 
@@ -78,6 +79,7 @@ function App() {
 
    return (
         <div className='app'>
+          <Header onSignOut={signOut} />
           <img src={Logo} alt="Logo" />
           <div className='text'>
             <h1 className='app-welcome'>Welcome to Smart waste!</h1>
