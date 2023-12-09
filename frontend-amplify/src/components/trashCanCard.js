@@ -10,6 +10,7 @@ import greenTrash from "../images/greentrash.png";
 
 const TrashCanCard = ({ status, index, data }) => {
     let imageSrc, color, statusText, trashCanNumber;
+    console.log(`Data for Trash Can ${index + 1}:`, data);
 
     switch (status) {
         case true:
@@ -49,16 +50,16 @@ const TrashCanCard = ({ status, index, data }) => {
                 {data ? (
                     <>
                         <Typography variant="body2" component="p" align='left'>
-                            Sensor ID: {data["id"]}
+                            Sensor ID: {data[data.length -1].id}
                         </Typography>
                         <Typography variant="body2" component="p" align='left'>
-                            Distance: {data["distance"]}
+                            Distance: {data[data.length -1].distance}
                         </Typography>
                         <Typography variant="body2" component="p" align='left'>
-                            Timestamp: {new Date(data["timestamp"] * 1000).toLocaleString()}
+                            Timestamp: {new Date(data[data.length -1].timestamp * 1000).toLocaleString()}
                         </Typography>
                         <Typography variant="body2" component="p" align='left'>
-                            Publish Count: {data["publishCount"]}
+                            Publish Count: {data[data.length -1].publish_count}
                         </Typography>
                     </>
                 ) : (
