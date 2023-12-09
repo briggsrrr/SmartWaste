@@ -36,9 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@aws-amplify/backend": "^0.6.0",
-    "@aws-amplify/backend-cli": "^0.9.2",
-    "typescript": "^5.3.3"
-  }
+  "proxy": "https://z9fpcha94g.execute-api.us-west-2.amazonaws.com"
 }
