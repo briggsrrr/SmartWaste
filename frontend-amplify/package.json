@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@aws-amplify/ui-react": "^6.0.5",
+    "@tanstack/react-query": "^5.12.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -39,5 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://z9fpcha94g.execute-api.us-west-2.amazonaws.com"
+  "proxy": "https://xr7p7nx44e.execute-api.us-west-2.amazonaws.com"
 }

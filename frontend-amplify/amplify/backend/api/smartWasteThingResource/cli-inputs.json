@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/sensordata": {
+      "name": "/sensordata",
+      "lambdaFunction": "SmartWasteThingLamdaFrontend",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

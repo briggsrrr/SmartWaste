@@ -1,38 +1,37 @@
-.App {
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.app {
+  margin-top: -50px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-welcome {
+  margin-top: -200px;
+  font-size: 70px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-welcome-details {
+  font-size: 45px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text{
+  margin-top: -150px;
+}
+
+.app-welcome-details-trash {
+  font-size: 15px;
+}
+
+.trash{
+  margin-top: -55px;
+  margin-bottom: 70px;
+}
+
+.button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically if needed */
+  margin-top: -200px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
