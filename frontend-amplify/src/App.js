@@ -17,7 +17,7 @@ function App() {
     isLoading,
     isError,
     error,
-    data
+    data: trashCanData
   } = useQuery(
     {
       queryKey: ['items'],
@@ -43,27 +43,22 @@ function App() {
     return <div>Error: {error.message}</div>;
   }
 
-  const getLastItemDistance = () => {
-    if (data && data.length > 0) {
-      const lastItem = data[data.length - 1];
-      return parseInt(lastItem.distance, 10); 
-    }
-    return null;
-  };
-
-  const lastItemDistance = getLastItemDistance();
-  const isTrashCan1Full = lastItemDistance !== null && lastItemDistance < 11;
-  const trashCanStatuses = [isTrashCan1Full, false, false];
+  // Assuming trashCanData is the data for the first trash can
+  const trashDataArray = [trashCanData, null, null];
 
   return (
     <div className='app'>
       <Header onSignOut={signOut} />
       <div className="flex justify-around my-4">
-        {trashCanStatuses.map((status, index) => (
-          <React.Fragment key={index}>
-          <TrashCanCard key={index} status={status} index={index} data={data ? data : null} />
-        </React.Fragment>
-        ))}
+        {trashDataArray.map((data, index) => {
+
+          const isFull = data && parseInt(data[data.length -1].distance, 10) < 11;
+          return (
+            <React.Fragment key={index}>
+              <TrashCanCard status={isFull} index={index} data={data} />
+            </React.Fragment>
+          );
+        })}
       </div>
     </div>
   );
