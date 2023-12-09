@@ -49,16 +49,16 @@ const TrashCanCard = ({ status, index, data }) => {
                 </Typography>
                 {data ? (
                     <>
-                        <Typography variant="body2" component="p" align='left'>
+                        <Typography variant="body2" component="p" >
                             Sensor ID: {data[data.length -1].id}
                         </Typography>
-                        <Typography variant="body2" component="p" align='left'>
+                        <Typography variant="body2" component="p" >
                             Distance: {data[data.length -1].distance}
                         </Typography>
-                        <Typography variant="body2" component="p" align='left'>
+                        <Typography variant="body2" component="p" >
                             Timestamp: {new Date(data[data.length -1].timestamp * 1000).toLocaleString()}
                         </Typography>
-                        <Typography variant="body2" component="p" align='left'>
+                        <Typography variant="body2" component="p" >
                             Publish Count: {data[data.length -1].publish_count}
                         </Typography>
                     </>
