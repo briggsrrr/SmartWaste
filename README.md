@@ -12,7 +12,7 @@ Our vision is to create a fully connected waste management analytics system. By 
 # Diagrams 
 
 ### High Level Software Architecture
-![High Level Software Architecture]()
+![High Level Software Architecture](assets/smartwaste-software-diagram.jpg)
 
 ### High Level Hardware Architecture
 ![High Level Hardware Architecture](assets/smartwaste-hardware-diagram.png)
