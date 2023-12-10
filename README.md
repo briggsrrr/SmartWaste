@@ -1,10 +1,28 @@
 # Smart-Waste
 
-Our vision is to create a connected and sustainable campus through an innovative smart waste management system. By outfitting trash and recycling bins with laser sensors and connectivity, we will build a network that provides real-time bin fill status and optimization of waste routes.
 
-Our technology will increase collection efficiency, reducing emissions from hauling routes. The data gathered will provide insights to drive further waste minimization initiatives and zero waste goals.
+### Problem 
+Inefficient monitoring of trash cans leads to operational challenges, including frequent overflows and spillage. This inconsistency burdens cleaning staff who manage multiple trash bins, negatively impacting their operational efficiency.
 
-<img width="905" alt="Screenshot 2023-12-08 at 2 50 27 PM" src="https://github.com/ucsb/CS190B-F23-SmartWaste-rbriggs/assets/77701125/5bf646c0-1015-4fb8-b047-55904b6e2764">
+### Vision
+Our vision is to create a fully connected waste management analytics system. By outfitting trash and recycling bins with sensors and connectivity, we want to build a network that provides real-time bin fill status and more for intutionals includings goverments, schools, and enterprises.
+
+
+
+# Diagrams 
+
+### High Level Software Architecture
+![High Level Software Architecture]()
+
+### High Level Hardware Architecture
+![High Level Hardware Architecture](assets/smartwaste-hardware-diagram.png)
+
+### Voltage Diagram
+![Voltage Diagram](assets/smartwaste-voltage-diagram.png)
+
+### Fronend 
+![Alt text](assets/smartwaste-frontend.png)
+
 
 # Links
 
@@ -14,14 +32,5 @@ Our technology will increase collection efficiency, reducing emissions from haul
 |Vision              | [link](https://docs.google.com/document/d/19BQFE9qavzx0fWWvS-5EhH40ZsDCvB0uqDrFN7ACtwo/edit?usp=sharing)   |
 |Video               | [link](https://drive.google.//)   |
 |Demo/Slides         | [link](https://drive.google.//)   |
-|Additional          | [link](https://drive.google.//)   |
-Video 
 
 
-## Troubleshooting
-
-1. If you get that ports are not avaliable (if you don't want to use another port): 
-    1. `lsof -i :<PORTINUSE>`
-    2. `kill -9 <PID>`
-
-`
