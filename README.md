@@ -20,7 +20,7 @@ Our vision is to create a fully connected waste management analytics system. By 
 ### Voltage Diagram
 ![Voltage Diagram](assets/smartwaste-voltage-diagram.png)
 
-### Fronend 
+### Frontend 
 ![Alt text](assets/smartwaste-frontend.png)
 
 
