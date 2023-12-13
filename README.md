@@ -23,6 +23,23 @@ Our vision is to create a fully connected waste management analytics system. By 
 ### Frontend 
 ![Alt text](assets/smartwaste-frontend.png)
 
+# Quick Use 
+
+### Starting Ultra Sonic Sensor for the Trash Can(s)
+- ssh briggsrrr@briggsrrr.local
+- ./SmartWaste/iot-things/ultrasonic/start.sh SENSORID/ALL
+
+### Starting Camera Sensor for the Trash Can(s) NOTE:INCOMPLETE
+- ssh briggsrrr@briggsrrr.local
+- ./SmartWaste/iot-things/camera/start.sh SENSORID/ALL
+
+### Starting Frontend
+- cd amplify-frontend/
+- npm start
+
+### Starting Message Service NOTE:INCOMPLETE
+- cd message-service/
+- uvicorn main:app --reload
 
 # Links
 
