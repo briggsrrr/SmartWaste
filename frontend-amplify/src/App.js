@@ -43,7 +43,7 @@ function App() {
     return <div>Error: {error.message}</div>;
   }
 
-  // Assuming trashCanData is the data for the first trash can
+  //assuming trashCanData is the data for the first trash can
   const trashDataArray = [trashCanData, null, null];
 
   return (
