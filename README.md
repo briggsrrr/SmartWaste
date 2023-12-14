@@ -2,24 +2,10 @@
 
 
 ### Problem 
-There are 4 main problems we are tackling:
-
-1. Inconsistent Monitoring: Reliance on visual checks or routine schedules for emptying trash cans can lead to both premature or delayed disposal actions. Since trash cans can be full or empty depending on the usage, there is no direct schedule that can take place to ensure the most efficient waste management.
-
-2. Overflow and Spillage: Without a knowledge of the waste levels in trash cans, the issue of litter spillage is quite alarming. Many trash cans at UC Santa Barbara have this problem. This can lead to attracting pests, unsanitary and unsightly conditions.
-
-3. Poor Operational Efficiency: Real-time data allows for better planning and allocations of cleaning staff. This allows overall operational efficiency and reduces waste management costs. By accurately gauging waste levels, cleaning staff can efficiently schedule trash collection, avoiding the inefficiencies of too early or too late trash pickups.
-
-4. Lack of Access to Data-Driven Insights: Collection of fill-level data over time can provide valuable insights into waste generation patterns, assisting in better resource allocation and environmental sustainability efforts. For example, the UCSB library tends to have frequent trash buildups at certain hotspots. This data enables the strategic placement of additional trash cans in areas demonstrating higher waste generations.
+Inefficient monitoring of trash cans leads to operational challenges, including frequent overflows and spillage. This inconsistency burdens cleaning staff who manage multiple trash bins, negatively impacting their operational efficiency.
 
 ### Vision
-Our vision is centered around revolutionizing waste management systems. We're initiating this transformative journey by equipping trash and recycling containers with advanced sensors and connectivity features. This forward-thinking approach aims to establish a comprehensive network capable of delivering real-time information regarding the fill status of bins, tailored specifically for institutional entities such as governments, educational institutions, and corporate enterprises.
-
-The core objective of this initiative is to significantly enhance the efficiency of waste collection processes. By harnessing the power of real-time data, we can optimize hauling routes, thereby substantially reducing emissions associated with waste transportation. This not only contributes to environmental sustainability but also aligns with broader eco-friendly goals.
-
-Moreover, the valuable data collected through this system will serve as a crucial tool in providing deeper insights. These insights will be instrumental in formulating and implementing strategies focused on waste reduction and promoting initiatives that align with the aspirations of achieving zero waste targets.
-
-A key attribute of our technology is its exceptional scalability. This scalability is largely attributed to its design, which allows for seamless integration with existing waste management infrastructures. Such integration ensures that our solution can be easily adopted and adapted across various scales and settings, making it a versatile starting point and practical choice for enhancing waste management systems.
+Our vision is to create a fully connected waste management analytics system. By outfitting trash and recycling bins with sensors and connectivity, we want to build a network that provides real-time bin fill status and more for intutionals includings goverments, schools, and enterprises.
 
 
 
