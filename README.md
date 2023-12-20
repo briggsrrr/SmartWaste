@@ -23,7 +23,7 @@ Our vision is to create a fully connected waste management analytics system. By 
 ### Frontend 
 ![Alt text](assets/smartwaste-frontend.png)
 
-# Quick Use 
+# Local Use 
 
 ### Starting Ultra Sonic Sensor for the Trash Can(s)
 - ssh briggsrrr@briggsrrr.local
