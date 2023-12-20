@@ -20,9 +20,6 @@ Our vision is to create a fully connected waste management analytics system. By 
 ### Voltage Diagram
 ![Voltage Diagram](assets/smartwaste-voltage-diagram.png)
 
-### Frontend 
-![Alt text](assets/smartwaste-frontend.png)
-
 # Local Use 
 
 ### Starting Ultra Sonic Sensor for the Trash Can(s)
